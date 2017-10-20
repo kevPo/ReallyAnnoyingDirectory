@@ -6,6 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Really Annoying Directory</title>
+  <style>
+    .fadein {
+      opacity: 0;
+      -moz-transition: opacity 1s;
+      -webkit-transition: opacity 1s;
+      -o-transition: opacity 1s;
+      transition: opacity 1s;
+    }
+  
+    .fadein.loaded {
+      opacity: 1;
+    }
+  </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32870014-7"></script>
 <script>
@@ -18,7 +31,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 </head>
 
-<body>
+<body class="fadein" onload="document.body.className += ' loaded';">
 
   <div class="style-select-wrap">
     <div class="style-select">Page Layout <span class="select-icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span></div>
